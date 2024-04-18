@@ -1,169 +1,429 @@
-/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---           Stats            -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #sbs {
+@media only screen and (min-width: 0rem) {
+  #stats-539 {
     padding: var(--sectionPadding);
+    padding-top: 32.5rem;
   }
-  #sbs .cs-container {
+  #stats-539 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2.5rem;
+    align-items: flex-start;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #sbs .cs-left {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
-    position: relative;
-  }
-  #sbs .cs-picture {
-    border-radius: 1.5em;
-    display: block;
-    position: absolute;
-    /* clips img tag corners */
-    overflow: hidden;
-  }
-  #sbs .cs-picture img {
+  #stats-539 .cs-content {
+    text-align: left;
+    /* changes to 41% at tablet */
     width: 100%;
-    height: 100%;
-    /* makes image act like a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 32.625rem;
   }
-  #sbs .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    top: 0;
-    left: 0;
+  #stats-539 .cs-color {
+    color: var(--primaryLight);
   }
-  #sbs .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-    right: 0;
-    bottom: 0;
+  #stats-539 .cs-title {
+    max-width: 17ch;
   }
-  #sbs .cs-right {
-    max-width: 33.875rem;
-    margin: auto;
+  #stats-539 .cs-card-group {
+    /* changes to 43% at tablet */
+    width: 90%;
+    max-width: 32.625rem;
+    margin: 0 auto 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 16px - 52px */
+    row-gap: clamp(1rem, 5vw, 3.25rem);
   }
-  #sbs .cs-topper {
-    text-align: left;
-    margin-bottom: 0.25rem;
+  #stats-539 .cs-item {
+    width: 40%;
+    max-width: 12.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  #sbs .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #sbs .cs-text {
-    text-align: left;
-    max-width: 46.875rem;
-    margin-bottom: 1rem;
-  }
-  #sbs .cs-text:last-of-type {
-    margin-bottom: 2rem;
-  }
-  #sbs .cs-flex-group {
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
-    border-radius: 1rem;
-    position: relative;
-  }
-  #sbs .cs-flex-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #353535;
-  }
-  #sbs .cs-name {
-    font-size: 1rem;
-    font-weight: bold;
+  #stats-539 .cs-number {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
     line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.5rem 0;
     color: var(--headerColor);
     display: block;
   }
-  #sbs .cs-job {
-    font-size: 0.875rem;
+  #stats-539 .cs-desc {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.5em;
-    color: #353535;
+    font-weight: 400;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #stats-539 .cs-big-link {
+    width: 100%;
+    /* changes to a clamp at tablet */
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #stats-539 .cs-big-link:hover .cs-background img {
+    transform: scale(1.1);
+  }
+  #stats-539 .cs-background {
+    width: 100%;
+    height: 100%;
+    /* clips the img from overflowing the container on hover */
+    overflow: hidden;
     display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
-  #sbs .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
+  #stats-539 .cs-background:before {
+    /* color overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.72;
+    background-blend-mode: multiply;
     position: absolute;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-    bottom: 0rem;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 10;
   }
-  #sbs .cs-button-solid {
-    margin-top: 2rem;
+  #stats-539 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform 0.7s;
+  }
+  #stats-539 .cs-link-icon {
+    /* 80px - 110px */
+    width: clamp(5rem, 11vw, 6.875rem);
+    height: clamp(5rem, 11vw, 6.875rem);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  #stats-539 .cs-link-icon:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 29px 0px;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-539 {
+    padding: 0rem 2rem;
+  }
+  #stats-539 .cs-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 17.5rem;
+  }
+  #stats-539 .cs-content {
+    width: 41%;
+  }
+  #stats-539 .cs-card-group {
+    width: 43%;
+  }
+  #stats-539 .cs-big-link {
+    /* 280px - 580px */
+    height: clamp(20rem, 44vw, 36.25rem);
   }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64em) {
-  #sbs .cs-container {
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 3.25rem;
-  }
-  #sbs .cs-left {
-    font-size: min(1.2vw, 1em);
-    flex: none;
-  }
-  #sbs .cs-right {
-    margin: 0;
+  #stats-539 {
+    padding-top: 0rem;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs .cs-left:before,
-  body.dark-mode #sbs .cs-left:after {
-    background: var(--accent);
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-983 {
+    padding: var(--sectionPadding);
+    position: relative;
   }
-  body.dark-mode #sbs .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+  #contact-983 .cs-container {
+    width: 100%;
+    /* changes to 1064px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
   }
-  body.dark-mode #sbs .cs-topper {
-    color: var(--primaryLight);
+  #contact-983 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
   }
-  body.dark-mode #sbs .cs-title,
-  body.dark-mode #sbs .cs-text,
-  body.dark-mode #sbs .cs-h3,
-  body.dark-mode #sbs .cs-flex-p,
-  body.dark-mode #sbs .cs-name {
+  #contact-983 .cs-title {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs .cs-flex-group {
-    background-color: var(--accent);
+  #contact-983 .cs-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.75rem;
   }
-  body.dark-mode #sbs .cs-job {
-    color: var(--bodyTextColorWhite);
-    opacity: 0.8;
+  #contact-983 .cs-label {
+    font-size: 1rem;
+    line-height: 1.5em;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    grid-column: span 12;
   }
-  body.dark-mode #sbs .cs-quote-icon {
-    opacity: 0.2;
+  #contact-983 .cs-input {
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    padding-left: 1.5rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #484848;
+    border: none;
+  }
+  #contact-983 .cs-input::placeholder {
+    padding-top: 1rem;
+    color: #fff;
+    opacity: 0.5;
+  }
+  #contact-983 .cs-textarea {
+    height: 7.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+  }
+  #contact-983 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    grid-column: span 12;
+  }
+  #contact-983 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #contact-983 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #contact-983 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #contact-983 .cs-submit {
+    border: none;
+  }
+  #contact-983 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #contact-983 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #contact-983 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #contact-983 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #contact-983 .cs-container {
+    max-width: 66.5rem;
+  }
+  #contact-983 .cs-label {
+    grid-column: span 6;
+  }
+  #contact-983 .cs-message {
+    grid-column: span 12;
+  }
+  #contact-983 .cs-wrapper {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-727 {
+    padding: var(--sectionPadding);
+  }
+  #reviews-727 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-727 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-727 .cs-title {
+    max-width: 20ch;
+  }
+  #reviews-727 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  #reviews-727 .cs-item {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 32px - 48px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(2rem, 7vw, 3rem) clamp(1rem, 4vw, 2rem);
+    /* makes padding not affect height and width */
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #reviews-727 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 4vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    color: var(--headerColor);
+  }
+  #reviews-727 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 3rem 0;
+    color: var(--bodyTextColor);
+  }
+  #reviews-727 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin: auto 0 0 0;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  #reviews-727 .cs-name:before {
+    content: "";
+    width: 0.5rem;
+    height: 1px;
+    background: currentColor;
+    display: block;
+    position: relative;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-727 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-727 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #reviews-727 .cs-item {
+    width: 48.5%;
   }
 }
 /*-- -------------------------- -->
@@ -330,226 +590,5 @@
   }
   body.dark-mode #sbs-r .cs-quote-icon {
     opacity: 0.2;
-  }
-}
-/*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-/* Mobile - 360px - Contains hover animation */
-@media only screen and (min-width: 0em) {
-  #gallery {
-    /* Centers button */
-    text-align: center;
-    padding: var(--sectionPadding);
-    position: relative;
-    /* Prevents overflow from the image going off screen */
-    overflow: hidden;
-  }
-  #gallery .cs-container {
-    width: 100%;
-    max-width: 82.625em;
-    margin: auto;
-  }
-  #gallery .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  #gallery .cs-title {
-    text-align: center;
-    max-width: 38.8125rem;
-    margin-bottom: 2.5rem;
-  }
-  #gallery .cs-image-group {
-    /* used rem so it doesn't scale with the font size of on parent */
-    font-size: min(1.1vw, 1em);
-    width: 100%;
-    max-width: 82.625em;
-    margin: 0 auto 3.75rem;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.875em;
-  }
-  #gallery .cs-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.875em;
-  }
-  #gallery .cs-picture {
-    display: block;
-    position: relative;
-  }
-  #gallery .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #gallery .cs-row-1 .cs-picture1 {
-    width: 26.25em;
-    height: 35.4375em;
-  }
-  #gallery .cs-row-1 .cs-picture2 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #gallery .cs-row-1 .cs-picture3 {
-    width: 26.25em;
-    height: 32em;
-  }
-  #gallery .cs-row-2 .cs-picture1 {
-    width: 26.25em;
-    height: 30.75em;
-  }
-  #gallery .cs-row-2 .cs-picture2 {
-    width: 26.25em;
-    height: 32.3125em;
-  }
-  #gallery .cs-row-2 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #gallery .cs-row-3 .cs-picture1 {
-    width: 26.25em;
-    height: 39.0625em;
-  }
-  #gallery .cs-row-3 .cs-picture2 {
-    width: 26.25em;
-    height: 28.25em;
-  }
-  #gallery .cs-row-3 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #gallery .cs-title {
-    color: var(--bodyTextColorWhite);
-  }
-}
-/*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #reviews {
-    /* Centers the button */
-    text-align: center;
-    padding: var(--sectionPadding);
-  }
-  #reviews .cs-container {
-    width: 100%;
-    max-width: 69rem;
-    margin: auto;
-  }
-  #reviews .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  #reviews .cs-title {
-    text-align: center;
-    max-width: 43.75rem;
-  }
-  #reviews .cs-text {
-    text-align: center;
-    max-width: 40.625rem;
-    /* 88px - 104px */
-    margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
-  }
-  #reviews .cs-card-group {
-    /* 48px - 64px */
-    margin: 0 auto clamp(3rem, 5vw, 4rem);
-    padding: 0;
-  }
-  #reviews .cs-item {
-    text-align: left;
-    list-style: none;
-    width: 100%;
-    max-width: 33.875rem;
-    margin: 0 auto 4rem;
-    /* Prevents padding from affecting height & width */
-    box-sizing: border-box;
-    /* Padding L & R - 16px - 32px */
-    padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
-    /* 32px - 40px */
-    padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
-    background: #fff;
-    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  #reviews .cs-item:last-of-type {
-    margin-bottom: 0;
-  }
-  #reviews .cs-item-img {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    top: calc(-40 / 16 * 1rem);
-  }
-  #reviews .cs-item-p {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0 0 1.25rem;
-    padding-bottom: 1.25rem;
-    color: var(--bodyTextColor);
-    border-bottom: 1px solid #e8e9ec;
-  }
-  #reviews .cs-reviewer {
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.5em;
-    width: 40%;
-    margin: 0 auto 0 0;
-    color: var(--headerColor);
-    display: block;
-  }
-  #reviews .cs-desc {
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: var(#353535);
-    display: block;
-  }
-  #reviews .cs-item-stars {
-    width: 6rem;
-    height: 1rem;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-  #reviews .cs-card-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  #reviews .cs-item {
-    /* reset margin so it won't interfere with flexbox */
-    margin: 0;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #reviews .cs-item {
-    background: var(--medium);
-  }
-  body.dark-mode #reviews .cs-desc {
-    color: var(--primaryLight);
   }
 }
